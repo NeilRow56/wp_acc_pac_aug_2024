@@ -15,16 +15,20 @@ const links = [
     href: "/dashboard",
   },
   {
+    name: "Clients",
+    href: "/dashboard/clients",
+  },
+  {
     name: "Completion",
     href: "/dashboard/completion",
   },
   {
-    name: "Working Papers",
-    href: "/dashboard/working_papers",
-  },
-  {
     name: "Planning",
     href: "/dashboard/planning",
+  },
+  {
+    name: "Working Papers",
+    href: "/dashboard/working_papers",
   },
 ];
 
@@ -39,7 +43,7 @@ export function DashboardNavigation() {
           className={cn(
             link.href === pathname
               ? "text-foreground font-bold text-lg"
-              : "text-muted-foreground hover:text-foreground text-lg"
+              : "text-muted-foreground hover:text-primary text-lg"
           )}
         >
           {link.name}
