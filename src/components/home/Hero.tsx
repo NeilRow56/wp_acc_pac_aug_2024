@@ -6,6 +6,10 @@ import React from "react";
 import { Computer } from "lucide-react";
 import { Button } from "../ui/button";
 import { Logo } from "../Logo";
+import {
+  LoginLink,
+  RegisterLink,
+} from "@kinde-oss/kinde-auth-nextjs/components";
 
 const Hero = () => {
   return (
@@ -41,8 +45,13 @@ const Hero = () => {
                   </li>
                 </ul>
               </div>
-              <div className="mx-auto mt-10 flex max-w-sm justify-center">
-                <Button>Sign In</Button>
+              <div className="mx-auto mt-10 flex gap-8 max-w-sm justify-center">
+                <Button asChild>
+                  <LoginLink>Sign in</LoginLink>
+                </Button>
+                <Button asChild>
+                  <RegisterLink>Create Account</RegisterLink>
+                </Button>
               </div>
             </div>
           </section>
