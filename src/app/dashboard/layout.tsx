@@ -62,6 +62,9 @@ export default async function DashboardLayout({
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuItem asChild>
+                <LogoutLink>{user.email}</LogoutLink>
+              </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
                 <LogoutLink>Logout</LogoutLink>

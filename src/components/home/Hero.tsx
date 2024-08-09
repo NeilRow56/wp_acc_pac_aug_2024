@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:mt-16">
           <section className="flex  items-center justify-center bg-background px-2">
             <div className="mx-auto max-w-[800px] text-center">
-              <div className="pt-6 xl:pt-1">
+              <div className="pt-6 xl:pt-8 ">
                 <span className="w-auto rounded-full bg-secondary px-2 py-3 sm:px-6">
                   <span className="text-xs font-medium md:text-sm">
                     A quicker way to prepare and review files .
@@ -36,7 +36,7 @@ const Hero = () => {
                   Create working papers with ease
                 </h1>
 
-                <ul className="mx-auto mt-8 max-w-xl font-bold text-start text-secondary-foreground lg:text-xl space-y-4 list-disc">
+                <ul className="mx-auto mt-8 max-w-xl font-bold text-start text-secondary-foreground lg:text-xl space-y-4 list-disc mb-[160px]">
                   <li>Online accounts preparation file.</li>
                   <li>Automatic comparative schedules.</li>
                   <li>Secure cloud storage.</li>
@@ -45,14 +45,14 @@ const Hero = () => {
                   </li>
                 </ul>
               </div>
-              <div className="mx-auto mt-10 flex gap-8 max-w-sm justify-center">
+              {/* <div className="mx-auto mt-10 flex gap-8 max-w-sm justify-center">
                 <Button asChild>
                   <LoginLink>Sign in</LoginLink>
                 </Button>
                 <Button asChild>
                   <RegisterLink>Create Account</RegisterLink>
                 </Button>
-              </div>
+              </div> */}
             </div>
           </section>
 
