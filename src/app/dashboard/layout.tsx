@@ -31,7 +31,7 @@ export default async function DashboardLayout({
     return redirect("/");
   }
   return (
-    <div className="flex flex-col w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 ">
       <header className="sticky top-0 flex h-16 items-center justify-between gap-4 border-b ">
         <nav className="hidden font-medium xl:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6 md:pl-[260px]">
           <DashboardNavigation />

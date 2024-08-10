@@ -12,7 +12,7 @@ export const clientCategories = [
   {
     id: 3,
     title: "Sole Trader",
-    name: "kids",
+    name: "sole_trader",
   },
   {
     id: 4,

@@ -6,10 +6,13 @@ import {
 } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default async function LandingPage() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
+
+  if (user) redirect("/dashboard");
 
   return (
     <section className="flex flex-col  items-center justify-center bg-background">
