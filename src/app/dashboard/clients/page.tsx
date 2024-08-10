@@ -8,11 +8,13 @@ import { unstable_noStore as noStore } from "next/cache";
 import { DataTable } from "./create/data-table";
 import { columns } from "./columns";
 import { PlusCircle } from "lucide-react";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { redirect } from "next/navigation";
 
-async function getData() {
+async function getData(userId: string) {
   const data = await db.client.findMany({
-    orderBy: {
-      name: "asc",
+    where: {
+      userId: userId,
     },
   });
 
@@ -21,7 +23,10 @@ async function getData() {
 
 export default async function ClientsPage() {
   noStore();
-  const data = await getData();
+  const { getUser } = getKindeServerSession();
+  const user = await getUser();
+  if (!user?.id) return redirect("/");
+  const data = await getData(user.id);
   return (
     <>
       <div className="pl-[206px] mt-6 flex w-full justify-between items-center">
