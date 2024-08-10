@@ -24,18 +24,20 @@ export default async function ClientsPage() {
   const data = await getData();
   return (
     <>
-      <div className="mt-8 pl-[210px]">
-        <h1 className="text-3xl font-bold text-primary">Clients</h1>
+      <div className="pl-[206px] mt-6 flex w-full justify-between items-center">
+        <div className="">
+          <h1 className="text-3xl font-bold text-primary">Clients</h1>
+        </div>
+        <div className="flex items-center justify-end">
+          <Button asChild className="flex items-center gap-x-2">
+            <Link href="/dashboard/clients/create">
+              <PlusCircle className="w-4 h-4" />
+              <span>Add Client</span>
+            </Link>
+          </Button>
+        </div>
       </div>
-      <div className="flex items-center justify-end">
-        <Button asChild className="flex items-center gap-x-2">
-          <Link href="/dashboard/clients/create">
-            <PlusCircle className="w-4 h-4" />
-            <span>Add Client</span>
-          </Link>
-        </Button>
-      </div>
-      <div className="container mx-auto py-10">
+      <div className="container mx-auto py-6">
         <DataTable columns={columns} data={data} />
       </div>
     </>
